@@ -5,7 +5,5 @@
   "author": "Hamza Farooq <hamza3366123@gmail.com>",
   "license": "MIT",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ]
+  "workspaces": ["gatsby_todo"]
 }
