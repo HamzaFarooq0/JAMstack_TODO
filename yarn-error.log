@@ -1,0 +1,41 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Hamaz\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add gatsby react react-dom
+
+PATH: 
+  C:\Users\Hamaz\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Hamaz\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Python38-32\Scripts;C:\Program Files (x86)\Python38-32;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\Program Files\MongoDB\Server\4.4\bin;C:\Users\Hamaz\AppData\Local\Microsoft\WindowsApps;C:\Users\Hamaz\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Users\Hamaz\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  12.19.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: E:\React App\JAMstack Serverless\JAMSTACK_TODO\package.json: Unexpected token } in JSON at position 202
+      at JSON.parse (<anonymous>)
+      at C:\Users\Hamaz\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\Hamaz\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\Hamaz\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "JAMSTACK_TODO",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "Hamza Farooq <hamza3366123@gmail.com>",
+    "license": "MIT",
+    "private": true,
+    "workspaces": {
+      "packages/*"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

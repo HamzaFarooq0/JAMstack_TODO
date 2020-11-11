@@ -1,0 +1,11 @@
+{
+  "name": "JAMSTACK_TODO",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Hamza Farooq <hamza3366123@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
