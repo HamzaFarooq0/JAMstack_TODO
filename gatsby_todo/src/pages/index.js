@@ -6,16 +6,16 @@ import { Container, Heading, Button, Flex } from 'theme-ui';
 //importing netlifyIdentity
 import netlifyIdentity from 'netlify-identity-widget'
 
-//Initializing netlifyidentity
-/* 
-we're using useEffect so it won't run on server instead on browser coz server don't allow
-us to use identity widget on server side. 
-*/
-useEffect(() => {
-	netlifyIdentity.init({});
-})
 
 export default function Home() {
+	//Initializing netlifyidentity
+	/* 
+	we're using useEffect so it won't run on server instead on browser coz server don't allow
+	us to use identity widget on server side. 
+	*/
+	useEffect(() => {
+		netlifyIdentity.init({});
+	})
 	return (
 		<Container>
 			<Flex sx={{ flexDirection: 'column', padding: 3 }}>
