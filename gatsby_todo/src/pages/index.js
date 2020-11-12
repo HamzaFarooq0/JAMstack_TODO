@@ -1,29 +1,39 @@
-import React, { useEffect } from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'gatsby';
 
 //Theme-UI
-import { Container, Heading, Button, Flex } from 'theme-ui';
+import { Container, Heading, Button, Flex, NavLink } from 'theme-ui';
 
 //importing netlifyIdentity
-import netlifyIdentity from 'netlify-identity-widget'
+// import netlifyIdentity from 'netlify-identity-widget';
 
+import { IdentityContext } from '../../indentity-context';
 
-export default function Home() {
-	//Initializing netlifyidentity
-	/* 
-	we're using useEffect so it won't run on server instead on browser coz server don't allow
-	us to use identity widget on server side. 
-	*/
-	useEffect(() => {
-		netlifyIdentity.init({});
-	})
+const Home = () => {
+	const { user, identity: netlifyIdentity } = useContext(IdentityContext);
+
 	return (
 		<Container>
+			<Flex as="nav">
+				<NavLink as={Link} to="/" p={2} m={2}>
+					Home
+				</NavLink>
+				<NavLink as={Link} to="/app" p={2} m={2}>
+					Dashboard
+				</NavLink>
+				<NavLink href="#!" p={2} m={2} sx={{ marginLeft: 'auto' }}>
+					{user && `Welcome, ${user.user_metadata.full_name}`}
+				</NavLink>
+			</Flex>
+
 			<Flex sx={{ flexDirection: 'column', padding: 3 }}>
 				<Heading as="h1">Theme-ui Container and theme checking !!</Heading>
-				<Button sx={{ margin: 2 }} onClick={() => netlifyIdentity.open()}>
-					Add Task
+				<Button sx={{ margin: 2, cursor: 'pointer' }} onClick={() => netlifyIdentity.open()}>
+					Login
 				</Button>
 			</Flex>
 		</Container>
 	);
-}
+};
+
+export default Home;
